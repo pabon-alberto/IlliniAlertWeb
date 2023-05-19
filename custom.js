@@ -15,6 +15,16 @@ function onLocationFound(e) { // Displays user's location | Function template by
 map.on('locationfound', onLocationFound);
 map.locate({setView: true, watch: true, maxZoom: 8}); // If you want to update location when moving.
 
+var popup = L.popup();
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent('You clicked the map at ' + e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);
+
 //Dark mode toggle
 
 function darkMode() {
@@ -41,4 +51,4 @@ function darkMode() {
       localStorage.getItem("theme") || "light";
 
 })();
-  
+
