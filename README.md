@@ -1,2 +1,2 @@
 # IlliniAlertWeb
-IlliniAlertWeb (IAW) is an ongoing web implementation of the messaging / twitter notification account of IlliniAlert.
+IlliniAlertWeb (IAW) is an ongoing web visualization project of the messaging / twitter notification account of IlliniAlert.
