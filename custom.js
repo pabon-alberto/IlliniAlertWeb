@@ -25,7 +25,7 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 
-const uiucMarker = L.marker([40.098452, -88.236678]).addTo(map); // University Overview pin
+const uiucMarker = L.marker([40.098452, -88.236678]).addTo(map); // University Overview pin.
 
 //Dark mode toggle
 
@@ -49,14 +49,14 @@ function darkMode() {
     let onpageLoad = localStorage.getItem("theme") || "";
     let element = document.body;
     element.classList.add(onpageLoad);
-    document.getElementById("theme").textContent =
-      localStorage.getItem("theme") || "light";
+    document.getElementById("theme").textContent = 
+        localStorage.getItem("theme") || "light";
 
 })();
 
 // University Overview Button
 
 function panToUIUC() {
-    uiucMarker.flyTo([40.098452, -88.236678], 5);
+    map.flyTo([40.098452, -88.236678], 12); // Coordinates that show an overview of UIUC.
 }
 
