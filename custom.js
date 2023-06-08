@@ -25,6 +25,8 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 
+const uiucMarker = L.marker([40.098452, -88.236678]).addTo(map); // University Overview pin
+
 //Dark mode toggle
 
 function darkMode() {
@@ -51,4 +53,10 @@ function darkMode() {
       localStorage.getItem("theme") || "light";
 
 })();
+
+// University Overview Button
+
+function panToUIUC() {
+    uiucMarker.flyTo([40.098452, -88.236678], 5);
+}
 
